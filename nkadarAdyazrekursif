@@ -1,0 +1,25 @@
+package rekürsif;
+
+import java.util.Scanner;
+
+
+public class nkadarAdyazrekursif_5 {
+    //kendisine parametre olarak gelen sayı kadar adınızı ekrana yazdıran rekürsif fonksiyonlar,
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        System.out.println("adınızı kaç kere yazdırmak istediğiniz giriniz");
+        int x=k.nextInt();
+        String s="Emine";
+        String y=adyazdır(s,x);
+        System.out.println(y);
+    }
+    public static String adyazdır(String ad,int b){
+        if (b==0) {
+            return "";
+        }
+        else  {
+            return ad+" "+adyazdır(ad,b-1);
+            
+        }
+    }
+}
