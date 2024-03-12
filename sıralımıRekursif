@@ -1,0 +1,25 @@
+
+package rekürsif;
+
+
+public class sıralımıRekursif_8 {
+  //(8)kendisine parametre olarak gelen tam sayı dizisnin sıralı olup olmadığını bulan rekürsif fonk.
+    public static void main(String[] args) {
+        int[] x={1,2,3,4,5};
+        boolean t=siralimi(x,0);
+        System.out.println(t);
+    }
+    public static boolean siralimi(int[] dizi,int ind){
+        if (ind==dizi.length-1) {
+            return true;
+            
+        }
+        else if (dizi[ind]<=dizi[ind+1]) {
+            return siralimi(dizi,ind+1);
+        }
+        else{
+            return false;
+        }
+ 
+    }
+}
