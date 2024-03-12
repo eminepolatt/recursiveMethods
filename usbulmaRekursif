@@ -1,0 +1,17 @@
+
+package rekürsif;
+
+
+public class usbulmaRekursif_4 {
+    // kendisine parametre olarak gelen sayının üssünü bulan rekürsif fonk.
+    public static void main(String[] args) {
+        int x=us(2,7);
+        System.out.println(x);
+    }
+    public static int us(int a,int b){
+        if(b==0){
+            return 1;}
+        else{
+            return a*us(a,b-1);}
+    }
+}
