@@ -1,0 +1,21 @@
+
+package rekürsif;
+
+
+public class enbElamanindisi_7 {
+    //(7)kendisine parametre olarak gelen bir tam sayı dizisindeki en büyük elemanın indisini geri döndüren rekürsif fonk.
+    public static void main(String[] args) {
+        int dizi[]={1,2,3,4,5,6};
+        System.out.println("en büyük eleman "+enbindis(dizi,0,0)+". indistedir");
+    }
+    public static int enbindis(int a[],int i,int sayac){
+        if (sayac==a.length) {
+            return i;
+        }
+        else if (a[sayac]>a[i]) 
+            i=sayac;
+            return enbindis(a,i,sayac+1);
+        }
+        
+    }
+
