@@ -1,0 +1,21 @@
+
+package rekürsif;
+
+
+public class bassayıRekursif_3 {
+    //kendisine parametre olarak gelen sayının kaç basamaklı olduğunu bulan rekürsif fonksiyonu yazınız.
+    public static void main(String[] args) {
+        int x=125478;
+        int b=bassay(x,0);
+        System.out.println(b);
+    }
+    public static int bassay(int a,int ind){
+        if (a<10 && a>-10) {
+            return 1;
+        }
+       else if (a>10 || a<-10 ){
+            return 1+bassay(a/10,ind+1);
+        }
+       else return bassay(a,ind+1);
+    }
+}
