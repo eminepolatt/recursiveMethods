@@ -1,0 +1,24 @@
+
+package rekürsif;
+
+
+public class pozToplamıRekursif {
+     // kendisine parametre olarak gelen 10 elemanlı dizideki pozitif tam sayıların toplamını geri döndüren rekürsif fonksiyon
+    public static void main(String[] args) {
+        int[] d={1,7,-4,-2,6,9,-1,8,9,3};
+        int x=pozsay(d,0);
+       
+        System.out.println(x);
+    }
+    public static int pozsay(int[] dizi,int ind){
+        if(ind==dizi.length){
+            return 0;
+        }
+      else  if (dizi[ind]>0) {
+            
+            return dizi[ind]+pozsay(dizi,ind+1);
+        }
+        else return pozsay(dizi,ind+1);
+        
+    }
+}
