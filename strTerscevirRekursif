@@ -1,0 +1,18 @@
+
+package rekürsif;
+
+public class strTerscevirRekursif_13 {
+    //kendisine parametre olarak gelen stringi ters çevirip geri döndüren rekürsif fonk
+    public static void main(String[] args) {
+        String x="Emine";
+        String a=terscevir(x,0);
+        System.out.println(a);
+    }
+    public static String terscevir(String str,int ind){
+        if(str.length()==ind)
+            return "";
+        else
+            return terscevir(str,ind+1)+str.charAt(ind);
+        
+    }
+}
