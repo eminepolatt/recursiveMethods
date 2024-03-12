@@ -1,0 +1,24 @@
+
+package rekürsif;
+
+
+public class enbeelmanRekursif {
+    //kendisine parametre olarak gelen tam sayı dizideki en büyük elemanı geri döndüren rekürsif fonk.
+    public static void main(String[] args) {
+        int[] d={4,7,8,5,1};
+        int x=enbuyuk(d,0,0);
+        System.out.println(x);
+    }
+    public static int enbuyuk(int[] dizi,int ind,int enbind){
+       
+        if (dizi.length==ind) {
+            return dizi[enbind];
+        }
+        else if (dizi[enbind]<dizi[ind]) {
+
+           return enbuyuk(dizi,ind+1,ind);
+        }
+        else
+            return enbuyuk(dizi,ind+1,enbind);
+    }
+}
