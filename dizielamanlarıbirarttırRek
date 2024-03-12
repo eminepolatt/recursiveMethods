@@ -1,0 +1,26 @@
+
+package rekürsif;
+
+
+public class dizielamanlarıbirarttırRek {
+    //kendisine parametre olarak gelen tam sayı dizisinin her bir elemanını 1 arttırıp geri döndüren rekürsif fonk.
+    public static void main(String[] args) {
+        int []dizz={1,2,3,4,5};
+        int [] d=new int[5];
+        d=arttır(dizz,0);
+        for (int i = 0; i <dizz.length; i++) {
+            System.out.print(d[i]+" ");
+        }
+        
+    }
+    public static int[] arttır(int[] dizi,int ind){
+        if (ind==dizi.length) {
+            return dizi;
+        }
+        else{
+            dizi[ind]+=1;
+            return arttır(dizi,ind+1);
+        }
+       
+    }
+}
