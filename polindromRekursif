@@ -1,0 +1,33 @@
+
+package rekürsif;
+
+import java.util.Scanner;
+
+
+public class polindromRekursif_14 {
+    //kpog stringin palindrom olup olmadığını geri döndüren rekürsiif fonk yazınız
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        String x=k.nextLine();
+        boolean t=polindrom(x,0,x.length()-1);
+        if (t==true) {
+            System.out.println("polindromdur"); 
+        }
+        else System.out.println("polindrom değildir");
+       
+        
+    }
+    public static boolean polindrom(String a,int i,int son){
+        if (i==a.length()-1 && son==0) {
+            return true;
+        }
+        else if (a.charAt(i)==a.charAt(son)) {
+            
+            return polindrom(a,i+1,son-1);
+        }
+        else    
+            return false;
+        
+    }
+ 
+}
