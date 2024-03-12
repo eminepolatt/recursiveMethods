@@ -1,0 +1,21 @@
+
+package rekürsif;
+
+
+public class strkucukbulrekürsif {
+    //kendisine parametre olarak gelen stringteki küçük karakterleri geri döndüren rekürsif fonk. yazınız
+    public static void main(String[] args) {
+        String str=kbul("EminE",0); // 0=başlangıç indisi
+        System.out.println(str);
+    }
+    public static String kbul(String s,int ind){
+        if (ind== s.length()) {
+            return"";
+            
+        }
+        else if(s.charAt(ind)>='a'&& s.charAt(ind)<='z'){
+            return s.charAt(ind)+kbul(s,ind+1);
+        }
+        else return kbul(s,ind+1);
+    }
+}
