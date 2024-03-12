@@ -1,0 +1,22 @@
+
+package rekürsif;
+
+
+public class kucukharfRekursif_11 {
+   //(11)kendisine parametre olarak gelen dizide kaç tane küçük karakter vardır rekürsif fonk.
+    public static void main(String[] args) {
+        String dizi[]={"Emine","Azra","Ceren"};
+        int s=kucuksayisi(dizi,0,0);
+        System.out.println(s);
+    }
+    public static int kucuksayisi(String[] a, int i, int ind){
+        if (i==a.length) {
+            return 0;
+        }
+        else if (a[i].charAt(ind)>='a' && a[i].charAt(ind)<='z') {
+            return 1+kucuksayisi(a,i+1,ind+1);
+        }
+      else
+            return kucuksayisi(a,i,ind+1);
+    }
+}
