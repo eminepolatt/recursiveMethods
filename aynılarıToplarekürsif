@@ -1,0 +1,30 @@
+
+package rekürsif;
+
+
+public class aynılarıToplarekürsif {
+    // Kendisine parametre oalrak gelen tek boyutlu 2 sayısal dizideki yerleri ve  değeri aynı olan değerleri toplayıp geri döndüren ve
+// bunu ekrana yazan rekürsif methodu oluşturunuz.
+    public static void main(String[] args) {
+         int a[]={1,2,3,4,5};
+         int b[]={1,4,2,3,5};
+         int x=esitmi(a,b,0);
+         
+            System.out.println(x);
+        }
+         
+ 
+    public static int esitmi(int[]d1 ,int[]d2 ,int ind){
+        if (d1.length==ind) {
+            return 0;  
+        }
+             
+        else if (d1[ind]==d2[ind]) {
+            
+          
+         return d1[ind]+d2[ind]+esitmi(d1,d2,ind+1);
+        }
+       else return esitmi(d1,d2,ind+1);
+    }
+}
+   
