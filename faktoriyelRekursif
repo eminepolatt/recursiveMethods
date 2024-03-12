@@ -1,0 +1,22 @@
+
+package rekürsif;
+
+
+public class faktoriyelRekursif_1 {
+
+    // rekürsif fonksiyonlarda hiçbir döngü kullanılmaz
+    // kendisine parametre olarak gelen sayının faktoriyelini hesaplayan rekürsif fonksifon metodu
+    public static void main(String[] args) {
+     int x=factor(3);
+        System.out.println(x);
+    }
+    public static int factor(int n){
+        if (n==0) {
+            return 1;
+        }
+        else{
+            return n*factor(n-1);
+        }
+    }
+    
+}
