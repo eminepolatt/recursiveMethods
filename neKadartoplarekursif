@@ -1,0 +1,17 @@
+
+package rekürsif;
+
+
+public class neKadartoplarekursif_2 {
+    public static void main(String[] args) {
+            // kendisine parametre olarak gelen sayıya kadarki sayıları toplayan metod
+            int x=toplam(10);
+            System.out.println(x);
+    }
+    public static int toplam(int n){
+        if(n==1)
+            return 1;
+        else 
+            return n+toplam(n-1);
+    }
+}
