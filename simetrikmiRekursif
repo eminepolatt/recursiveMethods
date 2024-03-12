@@ -1,0 +1,21 @@
+
+package rekürsif;
+
+
+public class simetrikmiRekursif_9 {
+  //(9)kendisine parametre olarak gelen dizinin simetrik olup olmadığını hesaplayan rekürsif fonk.
+    public static void main(String[] args) {
+        int dizi[]={1,4,5,4,1};
+        boolean t=simetrikmi(dizi,0);
+        System.out.println(t);
+    }
+    public static boolean simetrikmi(int[] a,int i){
+        if (i==a.length) {
+            return true;
+        }
+        else if(a[i]==a[a.length-1-i]){
+            return simetrikmi(a,i+1);
+        }
+        else return false;
+    }
+}
